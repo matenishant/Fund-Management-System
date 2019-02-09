@@ -1,0 +1,66 @@
+Help File
+
+
+	1. index.jsp 			http://localhost:8080/bhagwanJi1/
+	
+				Username:		admin
+				Password:		admin123
+				
+			*No Forgot Password
+			*No other user
+			
+	2.	admin.jsp
+		
+			2.1 Register New Family
+			2.2 View Dhruv Fund Rashi
+			2.3 View and update details of family(it includes adding the amount by selecting particular family)
+			
+			2.1 reg-family.jsp
+	
+				family id : auto generate (randomly)
+			
+			
+					Save---------->register-family.jsp-------->success--------->view-families.jsp 	[2.3]
+													  -------->failure--------->reg-family.jsp
+													  
+			2.2 dhruv-fun-monthly-family.jsp
+				
+				Monthly fund collection including all the people(name, family id) who deposit fund in that month
+				Total Collection of every month
+					*Due not calculated   :(
+					
+			2.3 view-families.jsp
+			
+				shows basic details of any family
+				click on the name of head of the family------> details of that family (family-members.jsp)
+					
+					sequence not set for a particular family: since we have taken dob/relation of the members at the time of registration
+					
+					
+					2.3.1	family-members.jsp
+							update the details of any family member	(update-member.jsp)---------->up-members.jsp
+												success---->family-members.jsp
+												failure---->update-member.jsp
+												
+							hide any family member----------->hide_member.jsp
+							
+							* add amount from this page ----------> add-amount.jsp---------->amount.jsp
+							
+											
+									**min amount 			20
+									**date of deposit		year can be 2016 only
+												success---------->dhruv-fun-monthly-family.jsp
+												failure---------->add-amount.jsp
+							
+					2.3.2	reg-members.jsp
+							to add the new member to family	(register-members.jsp)
+										success------->family-members.jsp
+										failure------->register-members.jsp
+				
+					2.3.3	update-family.jsp
+							update the details of a family and its head	(update-family.jsp)
+									success----------->view-families.jsp
+									failure----------->update-family.jsp
+									
+					2.3.4	hide.jsp
+							to hide the family
